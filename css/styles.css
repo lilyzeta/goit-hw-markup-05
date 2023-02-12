@@ -540,3 +540,33 @@ img {
   color: var(--mainmid);
   letter-spacing: 0.03em;
 }
+
+/* MODAL */
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0.5;
+  pointer-events: stroke;
+}
+.modal-background {
+  background: rgba(0, 0, 0, 0.2);
+}
+.modal {
+  position: fixed;
+  background-color: var(--mainbright);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 528px;
+  height: 581px;
+  top: 0;
+  left: 0;
+}
+.modal-button {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: var(--maindark);
+  background-color: var(--mainbright);
+}
