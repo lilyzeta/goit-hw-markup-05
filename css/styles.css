@@ -540,13 +540,36 @@ img {
   color: var(--mainmid);
   letter-spacing: 0.03em;
 }
-
+.art-image {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+  transition-property: transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+}
+.art-overlay {
+  position: absolute;
+  top: 100;
+  left: 0;
+  width: 370px;
+  height: 294px;
+  background-color: var(--accentbright);
+  color: var(--mainbright);
+}
+.art-back:hover .overlay {
+  transform: translateY(-370px);
+  transition: transform 350ms ease;
+}
 /* MODAL */
 
 .is-hidden {
   visibility: hidden;
-  opacity: 0.5;
+  opacity: 1;
   pointer-events: stroke;
+  animation-name: modal-animation;
 }
 .modal-background {
   background: rgba(0, 0, 0, 0.2);
@@ -569,4 +592,31 @@ img {
   height: 30px;
   color: var(--maindark);
   background-color: var(--mainbright);
+  position: absolute;
+  top: 0%;
+  left: 94.25%;
+}
+.modal-close-svg {
+  fill: var(--maindark);
+  left: 22.22%;
+  right: 16.67%;
+  top: 16.67%;
+  bottom: 22.22%;
+}
+@keyframes modal-animation {
+  0% {
+  }
+  50% {
+  }
+  100% {
+  }
+}
+@keyframes animateTransform {
+  0% {
+    transform: translateY(-370);
+  }
+
+  100% {
+    transform: translateY(370) 350ms ease;
+  }
 }
