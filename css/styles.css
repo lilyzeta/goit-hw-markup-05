@@ -635,11 +635,6 @@ img {
 }
 /* MODAL */
 
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
 .modal-background {
   position: fixed;
   height: 100vh;
@@ -650,6 +645,7 @@ img {
   opacity: 1;
   visibility: visible;
 }
+
 .modal {
   position: absolute;
   background-color: var(--mainbright);
@@ -662,6 +658,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .modal-button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -680,13 +677,18 @@ img {
   top: 16.67%;
   bottom: 22.22%;
 }
-.modal-background .modal .promobutton:focus: {
-  animation: modal-animation;
+.modal-background .modal .promobutton:focus {
+  animation-name: modal-animation;
   animation-duration: 350ms;
   animation-timing-function: linear;
 }
 
-@keyframe modal-animation {
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+@keyframes modal-animation {
   0% {
     visibility: hidden;
     opacity: 0;
