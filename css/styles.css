@@ -13,6 +13,7 @@
   --bordercolor: #ececec;
   --backgroundoverlay: #c4c4c4;
   --bordercolorcustomers: #afb1b8;
+  --time: 250ms;
 }
 
 a:link:active {
@@ -105,7 +106,7 @@ img {
   padding-bottom: 32px;
   display: block;
   transition-property: color;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -138,7 +139,7 @@ img {
   display: flex;
   align-items: center;
   transition-property: color;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -247,7 +248,7 @@ img {
   fill: currentColor;
   background: rgba(255, 255, 255, 0.1);
   transition-property: background-color;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-icon {
@@ -298,7 +299,7 @@ img {
   padding: 10px 20px;
   border: none;
   transition-property: background-color, color;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   animation: modal-animation;
 }
@@ -378,7 +379,9 @@ img {
   width: 370px;
   height: 70px;
   position: absolute;
-  top: 224px;
+  bottom: 0px;
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 .whatwedo-overlay-text {
   color: var(--mainbright);
@@ -390,7 +393,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 27px;
 }
 /* Our Team */
 
@@ -462,7 +464,7 @@ img {
   color: var(--bordercolorcustomers);
   fill: currentColor;
   transition-property: background-color, color;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon-link:hover,
@@ -509,16 +511,15 @@ img {
   color: var(--bordercolorcustomers);
   justify-content: center;
   align-items: center;
-  transition-property: color;
-  transition-duration: 250ms;
+  transition-property: color, border-color;
+  transition-duration: var(--time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-item-link:hover,
 .customers-item-link:focus {
-  border: solid 1px var(--accentbright);
+  border-color: var(--accentbright);
   color: var(--accentbright);
-  fill: currentColor;
 }
 
 /* Portfolio Page */
@@ -548,7 +549,7 @@ img {
   padding-left: 26px;
   padding-right: 26px;
   transition-property: box-shadow, background-color, color;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .gallery-button:hover,
@@ -571,7 +572,7 @@ img {
   margin-top: 30px;
   flex-basis: calc(100% / 3 - 30px);
   transition-property: box-shadow;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
@@ -659,7 +660,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   animation-name: modal-animation;
-  animation-duration: 250ms;
+  animation-duration: var(--time);
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -671,8 +672,11 @@ img {
   color: var(--maindark);
   background-color: var(--mainbright);
   position: absolute;
-  top: 0%;
-  left: 94.25%;
+  top: 8px;
+  right: 8px;
+}
+.modal-button:hover.modal-button:focus {
+  cursor: pointer;
 }
 .modal-close-svg {
   fill: var(--maindark);
@@ -683,7 +687,7 @@ img {
 }
 .promobutton:click {
   animation-name: modal-animation;
-  animation-duration: 250ms;
+  animation-duration: var(--time);
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
