@@ -659,7 +659,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   animation-name: modal-animation;
-  animation-duration: 3500ms;
+  animation-duration: 250ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -683,7 +683,7 @@ img {
 }
 .promobutton:click {
   animation-name: modal-animation;
-  animation-duration: 3500ms;
+  animation-duration: 250ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
