@@ -352,12 +352,32 @@ img {
 }
 .whatwedo-items {
   justify-content: center;
+  position: relative;
 }
 
 .whatwedo-items:not(:last-child) {
   margin-right: 30px;
 }
 
+.whatwedo-overlay-textbox {
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  height: 70px;
+  position: absolute;
+  top: 224px;
+}
+.whatwedo-overlay-text {
+  color: var(--mainbright);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 27px;
+}
 /* Our Team */
 
 .ourteamback {
@@ -539,6 +559,7 @@ img {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 .art-back:hover,
 .art-back:focus {
@@ -594,7 +615,7 @@ img {
   padding-left: 24px;
   padding-right: 24px;
 }
-.art-image:hover .art-overlay {
+.art-back:hover .art-overlay {
   transform: translateY(0px);
   transition: transform 350ms ease;
 }
