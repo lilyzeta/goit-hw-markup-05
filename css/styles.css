@@ -644,6 +644,7 @@ img {
   left: 0;
   opacity: 1;
   visibility: visible;
+  animation-name: modal-animation;
 }
 
 .modal {
@@ -657,6 +658,9 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation-name: modal-animation;
+  animation-duration: 3500ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button {
@@ -677,10 +681,10 @@ img {
   top: 16.67%;
   bottom: 22.22%;
 }
-.modal-background .modal .promobutton:focus {
+.promobutton:click {
   animation-name: modal-animation;
-  animation-duration: 350ms;
-  animation-timing-function: linear;
+  animation-duration: 3500ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
@@ -692,10 +696,12 @@ img {
   0% {
     visibility: hidden;
     opacity: 0;
+    scale: (0);
   }
 
   100% {
     opacity: 1;
     visibility: visible;
+    scale: (1);
   }
 }
